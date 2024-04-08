@@ -1,0 +1,788 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.rubik-mono one-regular {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .major-mono display-regular {
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+:root{
+
+    --green: green;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 5px 5px 10px;
+    --border: 1rem solid rgba(0,0,0.1);
+    --outline: .1rem solid rgba(0,0,0.1);
+}
+
+.degradado {
+    background-color: white;
+    height: 100px;
+    width: 200px;
+
+}
+.degradado::after{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    background: #FBD3E9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100%;
+    filter:blur(10px);
+    z-index: -1;
+}
+
+* {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+border: none;
+text-decoration: none;
+text-transform: capitalize;
+transition: all .2s linear;
+}
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    background: #fffbd5; /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #fffbd5, #fffbd5); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #fffbd5, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+
+
+section {
+    padding: 2rem 9%;
+}
+
+.headerservicios {
+
+text-align: center;
+padding: 2rem 0;
+padding-bottom: 3rem;
+font-size: 3.5rem;
+color: var(--black);
+font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
+
+
+}
+
+.headerservicios span{
+    background: var(--green);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+
+}
+
+.btn{
+    border: 1px solid var(--black);
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 700;
+    font-style: normal;
+    box-shadow: 5px 10px #000;
+    background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.btn2{
+    border: 1px solid var(--black);
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    color: #000;
+    cursor: pointer;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 700;
+    font-style: normal;
+    box-shadow: 5px 10px #000;
+    background: #fffc00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.btn:hover{
+    background: var(--green);
+    color: #000;
+}
+
+
+.btn2:hover{
+    background: #00FF72;
+    color: #000;
+}
+
+.btn .btnname {
+
+text-shadow: 1px 2px #000;
+font-family: "Major Mono Display", monospace;
+font-weight: 700;
+font-style: normal;
+
+}
+.header {
+    border: 0px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 9%;
+    z-index: 1000;
+    box-shadow: 5px 5px 10px;
+    background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #12c2e9, #f64f59 50%, #c471ed);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #12c2e9, #f64f59 50%, #c471ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    
+}
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.header .logo i{
+    color: var(--green);
+}
+.header .navbar .logomama img{
+
+    height: 9rem;
+    width: auto;
+    border: 0px solid;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 45%;
+
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+    text-align: center;
+    justify-content: center;
+    padding: -100% 50%;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 600;
+    font-style: normal;
+    transform: translateY(+50%);
+    
+    
+}
+.header .navbar a:hover{
+    color: var(--green);
+}
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    border: 0px solid;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+
+}
+.header .icons div:hover{
+    background: var(--green);
+    color: white;
+}
+#menu-btn{
+    display: none;
+}
+
+.header .navbar.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form{
+    border: 1px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 10px;
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+
+}
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .search-form label:hover{
+    color: var(--green);
+}
+.header .shopping-cart{
+    border: 1px solid #BB377D;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 10px;
+    width: 30rem;
+    background: #fff;
+
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box{
+    border: 0px solid blue;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+
+}
+.header .shopping-cart .box img{
+    height: 10rem;
+
+}
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);
+}
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--green);
+}
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.header .shopping-cart .box .content span{
+    color: var(--light-color);
+    font-size: 1.7rem;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
+}
+.header .shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+    padding-block: 5rem;
+    font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+  
+  
+}
+.header .shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+    font-family: "Rubik Mono One", monospace;
+  font-weight: 800;
+  font-style: normal;
+}
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+
+.inicio {
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    background: url(../Proyectos/Iconos/dulces.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    
+}
+
+.inicio .content{
+    text-align: center;
+    width: 60rem;
+}
+
+.inicio .content h3{
+    color: #750000;
+    font-size: 3rem;
+    font-family: "Rubik Mono One", monospace;
+  font-weight: 800;
+  font-style: normal;
+}
+.inicio .content h3 span{
+    color: #FC354C;
+    font-family: "Rubik Mono One", monospace;
+  font-weight: 800;
+  font-style: normal;
+    
+}
+
+.inicio .content p{
+    color: var(--light-color);
+    font-size: 1.7rem;
+    
+}
+
+
+.servicios .box-container{
+
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    
+}
+
+.servicios .box-container .box {
+    border: 3px solid #000;
+    padding: 3rem 2rem;
+    background: #f64f59;
+    box-shadow: 5px 10px;
+    outline: var(--outline);
+    text-align: center;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.servicios .box-container .box:hover{
+    box-shadow: 2px 2px 20px 3px aqua;
+
+}
+
+.servicios .box-container .box h3{
+    font-size: 2rem;
+    line-height: 1;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
+    color: #142222;
+
+}
+
+.servicios .box-container .box h3 span{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
+    color: #3A0553;
+}
+.servicios .box-container .box p{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
+    color: #3A0553;
+    padding-bottom:1rem 0;
+}
+.presentaciones-slider .wrapper .box .price{
+
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.presentaciones .presentaciones-slider{
+    border: 0px solid;
+    border-left: 1.5px solid;
+    border-right: 1.5px solid;
+    padding: 1rem;
+}
+.presentaciones .presentaciones-slider:first-child{
+    margin-bottom: 2rem;
+}
+
+/* Paneles principales de productos */
+
+.presentaciones .presentaciones-slider .box{
+    border: 3px solid #000;
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    box-shadow: 5px 10px;
+    transform: .2s linear;
+}
+.presentaciones .presentaciones-slider .box:hover{
+    box-shadow: 2px 2px 20px 3px yellow;
+
+}
+.presentaciones .presentaciones-slider .box img{
+    height: 20rem;
+
+}
+.presentaciones .presentaciones-slider .box h1{
+    font-size: 2,5rem;
+    color: var(--black);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.presentaciones .presentaciones-slider .box .price{
+    font-size: 2rem;
+    color: rgb(21, 29, 4);
+    padding: .5rem 0;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+.presentaciones .presentaciones-slider .box .stars i{
+    font-size: 1.7rem;
+    color: orange;
+    padding: .5 0;
+}
+
+.categorias .box-container{
+    border: 0px solid #000;
+    border-radius: .5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+}
+
+.categorias .box-container .box{
+    border: 3px solid #000;
+    background: white;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 5rem 4rem;
+    outline-offset: -1rem;
+    box-shadow: 5px 10px;
+    transform: .2s linear;
+    
+}
+.categorias .box-container .box:hover{
+    box-shadow: 2px 2px 20px 3px yellow;
+}
+.categorias .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+.categorias .box-container .box h3{
+   font-size: 2rem;
+   color: var(--black);
+   line-height: 1.8;
+   font-family: "Rubik Mono One", monospace;
+   font-weight: 600;
+   font-style: normal;
+}
+.categorias .box-container .box p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem;
+    font-family: "Rubik Mono One", monospace;
+   font-weight: 600;
+   font-style: normal;
+ }
+
+.comentarios .comentarios-slider {
+    border: 0px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    padding: 1rem;
+
+}
+.comentarios .comentarios-slider .box {
+    border: 3px solid #000;
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 5rem 4rem;
+    outline-offset: -1rem;
+    box-shadow: 5px 10px;
+    transform: .2s linear;
+}
+.comentarios .comentarios-slider .box:hover{
+    box-shadow: 2px 2px 20px 4px purple;
+}
+.comentarios .comentarios-slider .box img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+.comentarios .comentarios-slider .box p{
+    padding: 1rem 0;
+    line-height: 1.8;
+    color: #000;
+    font-size: 1.5rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.comentarios .comentarios-slider .box h3{
+    padding-bottom: .5rem;
+    color: #490011;
+    font-size: 1.5rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.comentarios .comentarios-slider .box .stars i{
+    color: orange;
+    font-size: 1.7rem;
+}
+
+
+
+.pie-pagina {
+    width: 100%;
+    background-color: #0a141d;
+    opacity: 90%;
+}
+.pie-pagina .grupo1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo1 .boxpie figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo1 .boxpie figure img{
+    width: 250px;
+    opacity: 110%;
+}
+.pie-pagina .grupo1 .boxpie h2{
+    color: #fff;
+    margin-bottom: 25px;
+ font-size: 1.5rem;
+ font-family: "Anton", sans-serif;
+    font-weight: 1;
+    font-style: normal;
+
+}
+.pie-pagina .grupo1 .boxpie p{
+    color: #efefef;
+    margin-bottom: 10px;
+    font-family: "Anton", sans-serif;
+    font-weight: 1;
+    font-style: normal;
+    font-size: 1.5rem;
+   
+}
+.pie-pagina .grupo1 .red-social a{
+    
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+    size: 30px;
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+.pie-pagina .grupo1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+    font-family: "Anton", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.pie-pagina .grupo2 small{
+    font-size: 10px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+
+
+
+
+@media (max-width: 991px)
+{
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem 9%;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    #menu-btn{
+
+        display: inline-block;
+    }
+
+    .header .search-form{
+        width: 90%;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+
+    }
+
+    .header .navbar .logomama {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .navbar .logomama img{
+
+        position: absolute;
+        width: 90%;
+        padding: 35px 0px;
+        height: 9rem;
+        border: 0px solid;
+        line-height: 4.5rem;
+        border-radius: .5rem;
+        color: var(--black);
+        font-size: 2rem;
+        margin-right: .3rem;
+        text-align: center;
+        cursor: pointer;
+        padding: 5px 50%;
+    
+    }
+}
+@media (max-width: 450px)
+{
+    html{
+        font-size: 50%;
+    }
+
+    .headerservicios {
+        font-size: 2.5rem;
+
+    }
+
+}
+
+
+
