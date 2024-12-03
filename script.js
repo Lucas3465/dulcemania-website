@@ -85,4 +85,38 @@ var swiper = new Swiper(".presentaciones-slider", {
     },
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const checkboxes = document.querySelectorAll('.categories input[type="checkbox"]');
+    const products = document.querySelectorAll('.product');
+    const noProductsMessage = document.querySelector('.no-products');
 
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            filterProducts();
+        });
+    });
+
+    function filterProducts() {
+        const activeCategories = Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        let visibleProducts = 0;
+
+        products.forEach(product => {
+            const productCategories = product.dataset.categories.split(',');
+            if (activeCategories.length === 0 || activeCategories.some(category => productCategories.includes(category))) {
+                product.style.display = 'block';
+                visibleProducts++;
+            } else {
+                product.style.display = 'none';
+            }
+        });
+
+        if (visibleProducts === 0) {
+            noProductsMessage.style.display = 'block';
+        } else {
+            noProductsMessage.style.display = 'none';
+        }
+    }
+});
